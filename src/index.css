@@ -1,0 +1,517 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: 'DM Sans', sans-serif !important;
+  background-color: #fdf8f4 !important;
+}
+
+#pincoop {
+  display: none;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url('./assets/img/home.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: top left;
+}
+
+/* Header */
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 80px;
+  background: transparent;
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  transition: all 0.5s ease;
+}
+
+.add-shadow {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  background: #fff !important;
+}
+
+#header a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: #0c1d37;
+}
+
+.right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.right-mobile {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  color: #fff;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #0c1d37;
+  transition: 0.3s ease;
+}
+
+
+#navbar li a:hover,
+#navbar li a.active {
+  color: #ff6501;
+}
+
+#mobile {
+  display: none;
+}
+
+#close {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #0c1d37 !important;
+}
+
+.hero-section {
+  margin-top: 70px;
+}
+
+.hero-banner,
+.hero-banner>img {
+  border-radius: 50%;
+}
+
+.hero-banner::before {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background-image: url('assets/img/hero-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+}
+
+.has-before {
+  position: relative;
+  z-index: 1;
+}
+
+.has-before::before {
+  content: "";
+  position: absolute;
+}
+
+.img-holder {
+  aspect-ratio: 650 / 650;
+  background-color: #fbf2eb;
+}
+
+.img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.rental {
+  font-size: 48px;
+  font-weight: 800;
+  color: #0c1d37;
+  margin-bottom: 30px;
+}
+
+.hero-p {
+  margin-bottom: 34px;
+  font-size: 18px;
+  line-height: 168%;
+  color: #3b4555;
+}
+
+.about-p {
+  margin-bottom: 34px;
+  font-size: 18px;
+  line-height: 168%;
+  color: #3b4555;
+  max-width: 750px;
+}
+
+.card {
+  border-radius: 24px;
+}
+
+.form {
+  padding: 0 30px;
+}
+
+.form-control {
+  padding: 15px;
+  border-radius: 24px;
+  border: 1px solid #efe2d7;
+  outline: none;
+  color: #0c1d37;
+  font-weight: 500;
+  background: #fbf2eb;
+}
+.form-control::placeholder {
+  color: #0c1d37;
+  
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border: 1px solid #ff6501;
+  outline: none;
+  background-color: #fff;
+}
+
+textarea {
+  height: 150px;
+}
+
+ul li {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 168%;
+  color: #3b4555;
+}
+
+.rental span {
+  display: inline-block;
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  border-radius: 8px;
+  background-color: rgba(255, 101, 1, 0.12);
+  color: #ff6501
+}
+
+.button {
+  padding: 18px 40px;
+  border-radius: 50px;
+  background-color: #0c1d37;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  line-height: 115%;
+  font-weight: 500;
+  transition: all 0.5s ease;
+}
+
+.button:hover {
+  background-color: #ff6501;
+  border: none;
+}
+
+.buy {
+  background-color: #fff;
+  color: #ff6501;
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 30px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 29px 0px;
+}
+
+.track {
+  background-color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 4px 29px 0px;
+  margin-right: 15px;
+  color: #ff6501;
+}
+
+p.property,
+.name {
+  font-weight: 900;
+  color: #0c1d37;
+}
+
+.testimonial {
+  border-radius: 25px;
+  background-color: #fbf2eb;
+  padding: 25px;
+}
+
+.test {
+  color: #ff6501;
+  background-color: #fff;
+  padding: 9px 12px;
+  border-radius: 50%;
+}
+
+p.role {
+  margin-left: 50px;
+}
+
+#estate {
+  background-color: #0c1d37;
+  background-image: url('./assets/img/reach.png');
+  background-repeat: no-repeat;
+  background-position: 70%;
+  padding: 80px 20px;
+}
+
+.text-field-white {
+  height: 56px;
+  margin-bottom: 0px;
+  padding: 14px 26px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: hsla(0, 0%, 100%, 0);
+  border-radius: 50px;
+  background-color: hsla(0, 0%, 100%, 0.1);
+  -webkit-transition: border-color 200ms ease;
+  transition: border-color 200ms ease;
+  color: #fff;
+  font-size: 18px;
+  line-height: 120%;
+  outline: none;
+  width: 100%;
+}
+
+.submit-button-white {
+  padding: 18px 40px;
+  border-radius: 50px;
+  background-color: #fff;
+  -webkit-transition: color 200ms ease, background-color 200ms ease;
+  transition: color 200ms ease, background-color 200ms ease;
+  color: #0c1d37;
+  font-size: 18px;
+  line-height: 115%;
+  font-weight: 500;
+  border: none;
+}
+
+.submit-button-white:hover {
+  filter: brightness(0.9);
+}
+
+.footer-head {
+  margin-bottom: 26px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  opacity: 0.5;
+  color: #0c1d37;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 600;
+}
+
+.footer-links {
+  display: block;
+  color: #0c1d37;
+  font-size: 16px;
+  line-height: 130%;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.footer-links:hover {
+  color: #ff6501;
+  transform: translateX(10px);
+}
+
+.sign-up {
+  padding: 10px 20px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #0c1d37;
+  border-radius: 50px;
+  background-color: transparent;
+  -webkit-transition: background-color 200ms ease, color 200ms ease;
+  transition: background-color 200ms ease, color 200ms ease;
+  color: #0c1d37;
+  font-size: 16px;
+  line-height: 115%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sign-up:hover {
+  background-color: #0c1d37;
+  color: #fff;
+}
+
+.about-img {
+  border-radius: 25px;
+}
+
+#about-us {
+  background-color: #fff;
+  margin-top: 40px;
+  padding: 20px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 10px;
+}
+
+h2.info {
+  color: #ff6501 !important;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 800;
+}
+
+p.details {
+  color: #0c1d37;
+  text-align: center;
+  font-size: 15px;
+}
+
+
+@media (max-width: 992px) {
+  #navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 250px;
+    background-color: #fbf2eb;
+    box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+
+  #navbar.active {
+    right: 0px;
+  }
+
+  #navbar li {
+    margin-bottom: 25px;
+  }
+
+  #mobile {
+    display: flex;
+    align-items: center;
+  }
+
+  #mobile i {
+    color: #1a1a1a;
+    font-size: 24px;
+    padding-left: 20px;
+  }
+
+  #close {
+    display: initial;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #222;
+    font-size: 24px;
+  }
+  .right {
+    display: none;
+  }
+
+  .right-mobile {
+    display: flex;
+    flex-direction: column
+  }
+  h3,
+  h4 {
+    font-size: 14px !important;
+  }
+
+  p {
+    font-size: 10px;
+  }
+
+  .hero-section {
+    height: 40vh;
+  }
+
+  #pincoop-hero {
+    display: none;
+  }
+
+  .rental {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .hero-p {
+    font-size: 11px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    padding: 12px 18px;
+    font-size: 11px;
+  }
+
+  .buy {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 15px;
+  }
+
+  .track {
+    padding: 5px 7px;
+    margin-right: 10px;
+  }
+
+  .test {
+    padding: 2px 6px;
+  }
+
+  .name {
+    font-size: 12px;
+    margin-left: 25px;
+  }
+  h2.info {
+    font-size: 26px !important;
+  }
+  p.details, .footer-head {
+    font-size: 12px;
+  }
+  .footer-links {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 477px) {
+  #header {
+    padding: 10px 30px;
+  }
+}
